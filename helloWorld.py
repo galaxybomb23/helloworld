@@ -17,9 +17,12 @@ def git_push(message: str):
 
 
 f = open("hellofile.txt", "a")
+
 for i in range(5):
+    mess = f"Test commit {i} / 5"
     f.write(f"Now the file has more content! {i}\n")
-    git_push(i)
+    git_push(mess)
+
 f.close()
 
 print("hello world")
