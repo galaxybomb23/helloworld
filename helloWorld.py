@@ -4,12 +4,12 @@ from git import Repo
 PATH_OF_GIT_REPO = r'C:\Ubuntu FIles\helloworld\.git'  # make sure .git folder is properly configured
 COMMIT_MESSAGE = 'comment from python script 1'
 
-def git_push():
+def git_push(message: str):
     try:
         repo = Repo(PATH_OF_GIT_REPO)
         repo.git.add(update=True)
         repo.index.add("hellofile.txt")
-        repo.index.commit(COMMIT_MESSAGE)
+        repo.index.commit(message)
         origin = repo.remote(name='origin')
         origin.push()
     except:
@@ -17,9 +17,9 @@ def git_push():
 
 
 f = open("hellofile.txt", "a")
-f.write("Now the file has more content!\n")
+for i in range(5):
+    f.write(f"Now the file has more content! {i}\n")
+    git_push(i)
 f.close()
-
-git_push()
 
 print("hello world")
