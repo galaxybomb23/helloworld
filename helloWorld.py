@@ -2,7 +2,7 @@ from git import Repo
 
 
 PATH_OF_GIT_REPO = r'C:\Ubuntu FIles\helloworld\.git'  # make sure .git folder is properly configured
-COMMIT_MESSAGE = 'comment from python script'
+COMMIT_MESSAGE = 'comment from python script 1'
 
 def git_push():
     try:
