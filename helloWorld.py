@@ -11,6 +11,7 @@ def git_push(message: str):
         repo.git.add(update=True)
         repo.index.add("hellofile.txt")
         repo.index.commit(message)
+        repo.index.authored_date = repo.index.committed_date = 
         origin = repo.remote(name='origin')
         origin.push()
     except:
