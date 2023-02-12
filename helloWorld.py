@@ -8,6 +8,7 @@ def git_push():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
         repo.git.add(update=True)
+        repo.index.add("hellofile.txt")
         repo.index.commit(COMMIT_MESSAGE)
         origin = repo.remote(name='origin')
         origin.push()
@@ -16,7 +17,7 @@ def git_push():
 
 
 f = open("hellofile.txt", "a")
-f.write("Now the file has more content!")
+f.write("Now the file has more content!\n")
 f.close()
 
 git_push()
