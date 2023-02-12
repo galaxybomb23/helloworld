@@ -1,4 +1,5 @@
 from git import Repo
+from time import sleep
 
 
 PATH_OF_GIT_REPO = r'C:\Ubuntu FIles\helloworld\.git'  # make sure .git folder is properly configured
@@ -22,6 +23,8 @@ for i in range(5):
     mess = f"Test commit {i} / 5"
     f.write(f"Now the file has more content! {i}\n")
     git_push(mess)
+    #sleep for 5 seconds
+    sleep(5)
 
 f.close()
 
