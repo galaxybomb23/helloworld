@@ -20,7 +20,7 @@ def git_push(message: str):
 f = open("hellofile.txt", "a")
 
 for i in range(5):
-    mess = f"Test commit {i} / 5"
+    mess = f"Test commit 2: {i} / 5"
     f.write(f"Now the file has more content! {i}\n")
     git_push(mess)
     #sleep for 5 seconds
