@@ -12,7 +12,12 @@ def git_push():
         origin = repo.remote(name='origin')
         origin.push()
     except:
-        print('Some error occured while pushing the code')    
+        print('Some error occured while pushing the code')  
+
+
+f = open("hellofile.txt", "a")
+f.write("Now the file has more content!")
+f.close()
 
 git_push()
 
